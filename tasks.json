@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚦 Run All Traffic Scripts",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "start cmd /k python speed_detector.py && start cmd /k python telegram_alert.py && start cmd /k streamlit run dashboard_app.py"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
